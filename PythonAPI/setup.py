@@ -11,8 +11,8 @@ import numpy as np
 ext_modules = [
     Extension(
         'pycocotools._mask',
-        sources=['../common/maskApi.c', 'pycocotools/_mask.pyx'],
-        include_dirs = [np.get_include(), '../common'],
+        sources=['common/maskApi.c', 'pycocotools/_mask.pyx'],
+        include_dirs = [np.get_include(), 'common'],
         extra_compile_args=[] # originally was ['-Wno-cpp', '-Wno-unused-function', '-std=c99'],
     )
 ]
